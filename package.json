@@ -1,0 +1,29 @@
+{
+  "name": "vue-google-authenticator",
+  "version": "1.0.0",
+  "description": "Handling Google sign-in and sign-out",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilsonsouzah/vue-google-authenticator.git"
+  },
+  "keywords": [
+    "vue",
+    "google",
+    "authentication",
+    "gapi",
+    "signin",
+    "signout",
+    "login",
+    "logout"
+  ],
+  "author": "Gilson F. B. Souza <gilsonfernandesbatista@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gilsonsouzah/vue-google-authenticator/issues"
+  },
+  "homepage": "https://github.com/gilsonsouzah/vue-google-authenticator#readme"
+}
