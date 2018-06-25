@@ -28,7 +28,7 @@
         return new Promise(function (resolve, reject) {
           if (window.gapi === undefined) {
             installClient().then(function () {
-              return initClient()
+              return initClient(options)
             }).then(function () {
               resolve()
             })
