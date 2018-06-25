@@ -22,13 +22,9 @@
     }
   }
 
-  function googleAuth (options) {
-    if (typeof options === 'object') {
-        config = Object.assign(options, { scope: 'profile email https://www.googleapis.com/auth/plus.login' })
-    }
-
+  function googleAuth () {
     return {
-      load: function () {
+      load: function (options) {
         return new Promise(function (resolve, reject) {
           if (window.gapi === undefined) {
             installClient().then(function () {
@@ -37,7 +33,7 @@
               resolve()
             })
           } else if (window.gapi !== undefined && window.gapi.auth2 === undefined) {
-            initClient().then(function () {
+            initClient(options).then(function () {
               resolve()
             })
           }
@@ -89,7 +85,11 @@
     })
   }
 
-  function initClient () {
+  function initClient (options) {
+    if (typeof options === 'object') {
+        config = Object.assign(options, { scope: 'profile email https://www.googleapis.com/auth/plus.login' })
+    }
+
     return new Promise(function (resolve, reject) {
       window.gapi.load('auth2', function () {
         window.gapi.auth2.init(config)
