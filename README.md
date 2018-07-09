@@ -1,6 +1,9 @@
 # vue-google-authenticator
 Handling Google sign-in and sign-out for Vue.js applications
 
+# clone of
+[simmatrix/vue-google-auth](https://github.com/simmatrix/vue-google-auth).
+
 ## Installation
 ```
 npm install vue-google-authenticator
@@ -10,7 +13,7 @@ npm install vue-google-authenticator
 ```
 import GoogleAuth from 'vue-google-authenticator'
 
-Vue.use(GoogleAuth, { clientID: 'xxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com' })
+Vue.use(GoogleAuth, { client_id: 'xxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com' })
 Vue.googleAuth().load()
 ```
 Ideally you shall place this in your app entry file, e.g. src/main.js
