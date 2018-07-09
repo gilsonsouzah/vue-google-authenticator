@@ -36,6 +36,8 @@
             initClient(options).then(function () {
               resolve()
             })
+          } else {
+            resolve()
           }
         })
       },
